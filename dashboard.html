@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        /* Ajuste de layout geral */
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden; /* Impede rolagem na página */
+        }
+
+        .container-dashboard {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .iframe-container {
+            width: 100%;
+            max-width: 1000px; /* Limita a largura do container */
+            height: 80vh; /* Ajuste na altura para se adaptar melhor */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            overflow: hidden; /* Impede que o conteúdo interno transborde */
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            object-fit: cover; /* Faz o iframe se ajustar ao tamanho do container */
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .iframe-container {
+                height: 65vh; /* Menor altura para dispositivos móveis */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid container-dashboard">
+        <div class="iframe-container">
+            <iframe src="https://lookerstudio.google.com/embed/reporting/21da5d75-cf26-4e1f-91c1-0e62b1b15e12/page/Fm2SE" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+        </div>
+    </div>
+
+</body>
+</html>
